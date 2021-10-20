@@ -97,7 +97,7 @@ namespace FourthLabCSharp
             }
         }
 
-        private void GetButton_Click(object sender, EventArgs e)
+        private void GetGadgetButton_Click(object sender, EventArgs e)
         {
             if (_gadgets.Count == 0) RefillMachine();
 

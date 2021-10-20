@@ -30,13 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.GadgedImg = new System.Windows.Forms.PictureBox();
-            this.GetButton = new System.Windows.Forms.Button();
+            this.GetGadgetButton = new System.Windows.Forms.Button();
             this.LastGadgetsList = new System.Windows.Forms.ListView();
             this.GadgetsImgs = new System.Windows.Forms.ImageList(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.GadgetInfo = new System.Windows.Forms.Label();
             this.GadgetsInfo = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.GadgetInfo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.GadgedImg)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -50,19 +50,20 @@
             this.GadgedImg.TabIndex = 0;
             this.GadgedImg.TabStop = false;
             // 
-            // GetButton
+            // GetGadgetButton
             // 
-            this.GetButton.Location = new System.Drawing.Point(5, 318);
-            this.GetButton.Name = "GetButton";
-            this.GetButton.Size = new System.Drawing.Size(637, 65);
-            this.GetButton.TabIndex = 1;
-            this.GetButton.Text = "Выдать гаджет!";
-            this.GetButton.UseVisualStyleBackColor = true;
-            this.GetButton.Click += new System.EventHandler(this.GetButton_Click);
+            this.GetGadgetButton.Location = new System.Drawing.Point(5, 318);
+            this.GetGadgetButton.Name = "GetGadgetButton";
+            this.GetGadgetButton.Size = new System.Drawing.Size(637, 65);
+            this.GetGadgetButton.TabIndex = 1;
+            this.GetGadgetButton.Text = "Выдать гаджет!";
+            this.GetGadgetButton.UseVisualStyleBackColor = true;
+            this.GetGadgetButton.Click += new System.EventHandler(this.GetGadgetButton_Click);
             // 
             // LastGadgetsList
             // 
             this.LastGadgetsList.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+            this.LastGadgetsList.HideSelection = false;
             this.LastGadgetsList.LargeImageList = this.GadgetsImgs;
             this.LastGadgetsList.Location = new System.Drawing.Point(648, 12);
             this.LastGadgetsList.Name = "LastGadgetsList";
@@ -87,6 +88,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Гаджет";
             // 
+            // GadgetInfo
+            // 
+            this.GadgetInfo.AutoSize = true;
+            this.GadgetInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.GadgetInfo.Location = new System.Drawing.Point(5, 22);
+            this.GadgetInfo.Name = "GadgetInfo";
+            this.GadgetInfo.Size = new System.Drawing.Size(0, 17);
+            this.GadgetInfo.TabIndex = 0;
+            // 
             // GadgetsInfo
             // 
             this.GadgetsInfo.AutoSize = true;
@@ -107,15 +117,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "В автомате остались:";
             // 
-            // GadgetInfo
-            // 
-            this.GadgetInfo.AutoSize = true;
-            this.GadgetInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.GadgetInfo.Location = new System.Drawing.Point(5, 22);
-            this.GadgetInfo.Name = "GadgetInfo";
-            this.GadgetInfo.Size = new System.Drawing.Size(0, 17);
-            this.GadgetInfo.TabIndex = 0;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -123,7 +124,7 @@
             this.ClientSize = new System.Drawing.Size(892, 388);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.LastGadgetsList);
-            this.Controls.Add(this.GetButton);
+            this.Controls.Add(this.GetGadgetButton);
             this.Controls.Add(this.GadgedImg);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
@@ -140,7 +141,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox GadgedImg;
-        private System.Windows.Forms.Button GetButton;
+        private System.Windows.Forms.Button GetGadgetButton;
         private System.Windows.Forms.ListView LastGadgetsList;
         private System.Windows.Forms.ImageList GadgetsImgs;
         private System.Windows.Forms.GroupBox groupBox1;
