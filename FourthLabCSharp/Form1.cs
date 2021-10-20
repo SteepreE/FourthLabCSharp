@@ -24,9 +24,10 @@ namespace FourthLabCSharp
             InitializeComponent();
 
             RefillMachine();
+            UpdateLastGadgetsInfo();
         }
 
-        private void UpdateLastGadgetsList()
+        private void UpdateLastGadgetsInfo()
         {
             GadgetsInfo.Text = $"Смартфонов: {_smartphoneCount}\nНоутбуков: {_laptopCount}\nПланшетов: {_tabletCount}";
 
@@ -62,8 +63,6 @@ namespace FourthLabCSharp
                 else if (gadget is Tablet) 
                     _tabletCount++;
             }
-
-            UpdateLastGadgetsList();
         }
 
         private Gadget GenerateGadget()
@@ -114,7 +113,7 @@ namespace FourthLabCSharp
             GadgetsImgs.Images.RemoveAt(0);
             _gadgets.RemoveAt(0);
 
-            UpdateLastGadgetsList();
+            UpdateLastGadgetsInfo();
         }
     }
 }
